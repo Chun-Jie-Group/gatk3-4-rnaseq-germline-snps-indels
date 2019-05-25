@@ -510,7 +510,7 @@ task SplitNCigarReads {
 
     command <<<
     	java -jar /usr/gitc/GATK35.jar \
-    		-T SplitNCigarReads \
+    		-T SplitNCigarReads -fixMisencodedQuals \
     		-R ${ref_fasta} \
     		-I ${input_bam} \
     		-o ${base_name}.bam \
