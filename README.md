@@ -2,7 +2,8 @@
  Workflows for processing RNA data for germline short variant discovery with GATK (v3+v4) and related tools 
 
 ### Requirements/expectations :
- - BAM 
+ - BAM (test was done by bam file which was created by hisat2 and picard tools add group:
+ java -jar ~/software/picard/build/libs/picard.jar AddOrReplaceReadGroups I=S3D_5day_RMrRNA.bam O=S3D_5day_RMrRNA.new.bam RGID=4 RGLB=lib1 RGPL=illumina RGPU=unit1  RGSM=20 >>logs 2>&1 & )
 
 ### Output :
  - A BAM file and its index.
